@@ -20,6 +20,11 @@ Route::get('/','PublicController@top');
 
 Route::get('/search','RecipeController@search');
 
+Route::get('/recipes/create','RecipeController@create');
+
+Route::post('/recipes/create','RecipeController@store');
+
 Route::get('/recipes/{recipe}','RecipeController@show');
     
 Route::get('/user','UserController@user');
+

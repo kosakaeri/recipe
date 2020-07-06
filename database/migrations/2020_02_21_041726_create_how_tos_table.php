@@ -15,6 +15,8 @@ class CreateHowTosTable extends Migration
     {
         Schema::create('how_tos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('recipes_id');
+            $table->text('howto');
             $table->timestamps();
         });
     }

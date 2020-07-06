@@ -1,6 +1,5 @@
 @section('content1')
 <body>
-  <div class="container-sm">
     <div class="row justify-content-sm-center">
       <div class="col-4">
         <div class="input-group">
@@ -9,7 +8,6 @@
         </div>
       </div>
     </div>
-  </div>
   
   @yield('content2')
   
