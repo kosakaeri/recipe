@@ -19,7 +19,7 @@ class CreateRecipesTable extends Migration
             $table->string("title");
             $table->integer("user_id");
             $table->string("alcohol");
-            $table->string("image_path");
+            $table->string("image_path")->nullable();
             $table->boolean("flag");
 
         });

@@ -37,10 +37,16 @@ class RecipeController extends Controller
         $recipe->title=$request->title;
         $recipe->alcohol=$request->alcohol;
         $recipe->flag=false;
-        $recipe->image_path=basename($request->file("image")->store("public/images"));
         $recipe->user_id=1;//Auth::user()->id;
         $recipe->save();
         
+        if (isset($form['image'])) {
+        $path = $request->hasFile('image')->store('public/image');
+        $recipe->image_path = basename($path);
+      } else {
+          $recipe->image_path = null;
+      }
+          
         // materialとamountが同じ数でくる前提で考える
         for ($i = 0; $i < count($request->material); $i++) {
             $recipe_material = new Material;

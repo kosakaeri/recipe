@@ -1,55 +1,262 @@
-.footer {
-    li, ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        color: #696969;
-        }
-        
-    ul li a {
-        display: flex;
-        padding: .50em .25em;
-        margin-top: .5em;
-        border-bottom: 1px solid #c7c7cc;
-        transition: background .1s linear;
-        color: #696969;
-    
-        &:hover {
-            text-decoration: none;
-            background-color: #f3f3f3;
-        }
-        }
-    
-    a, a:hover, a:link {
-        color: inherit;
-        }
-    
-    h5 {
-        color: #696969;
-    }
-    
-    margin-top:20px;
-    
+//共通
+
+* {
+　color: $fontcolor;
+}
+a {
+    color: $fontcolor;
+}
+body{
+    background-color:#fff;
 }
 
+.container{
+    max-width: 1440px;
+    padding:0;
+    margin:0 auto;
+}
+.container-s{
+    max-width: 1000px;
+    padding:0;
+    margin:0 auto;
+}
+
+//header.footer
 .navbar {
-　　background-color: #faf0e6;
-　　margin-bottom: 30px;
+    // background-color: rgba(242,224,201,0.5);
+    padding-left: 2rem;
+    margin: 0 auto;
+}
+.navbar-light .navbar-brand {
+    color: $fontcolor;
+}
+.navbar-light .navbar-brand:hover, .dropdown-item:hover {
+    color: $subcolor;
+    background-color:transparent;
+}
+.navbar-light .navbar-toggler {
+    color:$subcolor;
+    border:transparent;
 }
 
-.navbar-brand {
-    color: #696969;
+
+.nav-link{
+    color: $fontcolor !important;
 }
 
-.container  {
-    ul li a {
-    color: #696969;
+.dropdown-item {
+    color: $fontcolor;
+    padding: 0.25rem 0.8rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+//top
+
+.mainvisual {
+    height: 600px;
+    background-position: right;
+    background-image: url(/images/main-bg.png);
+    background-size: cover;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.mein-message {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mein-message p {
+    font-size: 1.7rem;
+}
+
+.beer-img img {
+    width: 250px;
+}
+
+.beer-img {
+    margin-bottom:2rem;
+    text-align:center;
+}
+
+.searcharea {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.search-container{
+    position: relative;
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
+input#search-bar{
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid $fontcolor;
+    outline: none;
+    border-radius: 15px;
+  &:focus{
+    border: 1px solid $subcolor;
+    transition: 0.35s ease;
+    color: $fontcolor;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+      opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease; 
+      opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease; 
+     opacity: 0;
+     }    
+  }
+ }
+
+.fa-search {
+    position: absolute;
+    float: right;
+    top: 12px;
+    right: 15px;
+}
+
+
+@media screen and (max-width:480px) {
+    .mainvisual {
+    height: 200px;
+    background-position: center;
+    background-image: url(/images/main-bg-s.png);
+    background-size: cover;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    }
+    .mein-message {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    }
+    .mein-message p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+    .beer-img img {
+    width: 100px;
+    }
+    input#search-bar {
+    width: 70%;
+    }
+    .fa-search {
+    position: absolute;
+    float: right;
+    top: 12px;
+    right: 70px;
+    }
+
+}
+
+//create
+
+.recipes-create{
+    background-color:rgba(242,224,201,0.5);
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+
+.recipes-create .container-s{
+    background-color:#fff;
+    padding: 3rem 2rem;
+}
+
+.container-s h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.procedure{
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.img-post{
+    display:flex;
+    flex-direction:column;
+    
+    input {
+    margin-bottom: 1rem;
     }
 }
 
-.copyright {
-  text-align: center;
-  margin: 20px;
-  color: #696969;
+.material-form input, .amount-form input{
+    margin-bottom: 0.5rem;
 }
 
+p.text-right.add-form .btn {
+    border: 1px solid $subcolor;
+    color: $subcolor;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+}
+
+.add-form {
+    margin-bottom: 0;
+}
+
+textarea.form-control {
+    height: auto;
+}
+.alcohol-repertory .form-control {
+    display: inline;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-right: 0.3rem;
+}
+.alcohol-repertory label {
+    margin-right: 1rem;
+}
+
+.post-btn{
+    border: 1px solid $subcolor;
+    color: $subcolor;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    width: 200px;
+}
+.post-btn2:hover {
+  border: 1px solid $subcolor;
+  background: $subcolor; 
+  color:#fff;
+}
+  
+.post {
+    text-align: center;
+}
+
+@media screen and (max-width:480px) {
+    .procedure {
+    width: 100%;
+    }
+    .recipes-create .container-s {
+    padding: 2rem 0rem;
+    }
+    .recipes-create {
+    padding: 2rem 1rem;
+}
+}

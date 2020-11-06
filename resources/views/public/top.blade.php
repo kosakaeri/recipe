@@ -1,48 +1,25 @@
 @extends("layouts.app")
-@extends("layouts.layout")
 
-@section('content2')
-    <div class="container-sm">
-        <div class="row justify-content-sm-center">
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top" src="..." alt="カードの画像">
-                    <div class="card-body">
-                        <h5 class="card-title">カードのタイトル</h5>
-                        <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top" src="..." alt="カードの画像">
-                    <div class="card-body">
-                        <h5 class="card-title">カードのタイトル</h5>
-                        <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top" src="..." alt="カードの画像">
-                    <div class="card-body">
-                        <h5 class="card-title">カードのタイトル</h5>
-                        <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top" src="..." alt="カードの画像">
-                    <div class="card-body">
-                        <h5 class="card-title">カードのタイトル</h5>
-                        <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+@section('content')
+<div class="container">
+    <div class="mainvisual col-xs-12">
     </div>
-
-
+</div>
+<div class="container">
+    <div class="mein-message">
+        <p>かんたんおつまみで</p>
+        <p>家飲みをもっとたのしく</p>
+    </div>
+    <div class="beer-img">
+        <img src="{{ asset('/images/beer-img.png') }}" alt="beer-img">
+    </div>
+    <div class="searcharea">
+        <p>材料・料理名・飲みたいお酒からレシピを検索</p>
+        <form class="search-container">
+            <input type="text" id="search-bar" placeholder="ビール">
+            <a href="#"><i class="fas fa-search"></i></a>
+        </form>
+    </div>
+</div>
 
 @endsection
