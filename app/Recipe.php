@@ -8,7 +8,7 @@ class Recipe extends Model
 {
     public static $rules = array(
         'title' => 'required',
-        'alcohol' => 'required',
+        // 'alcohol' => 'required',
         // 'flag' => 'required',
     );
 }

@@ -7,7 +7,7 @@ use App\Recipe;
 use Illuminate\Support\Facades\Auth;
 use App\Material;
 use App\HowTo;
-
+use App\Alcohol;
 
 class RecipeController extends Controller
 {
@@ -32,21 +32,23 @@ class RecipeController extends Controller
         $this->validate($request, Recipe::$rules);
         $this->validate($request, Material::$rules);
         $this->validate($request, HowTo::$rules);
+        $this->validate($request, Alcohol::$rules);
         
         $recipe = new Recipe;
         $recipe->title=$request->title;
-        $recipe->alcohol=$request->alcohol;
-        $recipe->flag=false;
         $recipe->user_id=1;//Auth::user()->id;
-        $recipe->save();
         
         if (isset($form['image'])) {
         $path = $request->hasFile('image')->store('public/image');
         $recipe->image_path = basename($path);
       } else {
           $recipe->image_path = null;
-      }
-          
+      }       
+      
+        $recipe->save();
+        // $recipe->alcohol=$request->alcohol;
+        // $recipe->flag=false;
+
         // materialとamountが同じ数でくる前提で考える
         for ($i = 0; $i < count($request->material); $i++) {
             $recipe_material = new Material;
@@ -60,6 +62,13 @@ class RecipeController extends Controller
         $recipe_howto->recipes_id = $recipe->id;
         $recipe_howto->howto=$request->howto;
         $recipe_howto->save();
+        
+        for ($i = 0; $i < count($request->alcohol); $i++) {
+        $recipe_alcohol = new Alcohol;
+        $recipe_alcohol->recipes_id = $recipe->id;
+        $recipe_alcohol->alcohol = $request->alcohol[$i];
+        $recipe_alcohol->save();
+        }
         
         return redirect('recipes/create');
         
