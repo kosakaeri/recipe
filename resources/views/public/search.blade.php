@@ -1,58 +1,48 @@
-@extends("layouts.app")
-@extends("layouts.layout")
+@extends('layouts.app')
 
-@section('content2')
-    <div class="container">
-        <div class="row justify-content-center show-recipe">
-            <div class="col-3 card" style="width: 15rem;">
-                <img class="card-img-top" src="..." alt="カードの画像">
+@section('content')
+<div class="container search">
+    <div class="container-s">
+        <p>〇〇〇の検索結果</p>
+        <div class="d-flex flex-wrap">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-img">イメージ表示</div>
                 <div class="card-body">
-                    <h5 class="card-title">カードのタイトル</h5>
-                    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                </div>
-            </div>
-            <div class="col-3 card" style="width: 15rem;">
-                <img class="card-img-top" src="..." alt="カードの画像">
-                <div class="card-body">
-                    <h5 class="card-title">カードのタイトル</h5>
-                    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                </div>
-            </div>
-            <div class="col-3 card" style="width: 15rem;">
-                <img class="card-img-top" src="..." alt="カードの画像">
-                <div class="card-body">
-                    <h5 class="card-title">カードのタイトル</h5>
-                    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+                    <div class="card-title">タイトル</div>
+                    <div class="card-textarea">ビール・赤ワインが合います</div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center show-recipe">
-            <div class="col-3 card" style="width: 15rem;">
-                <img class="card-img-top" src="..." alt="カードの画像">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-img">イメージ表示</div>
                 <div class="card-body">
-                    <h5 class="card-title">カードのタイトル</h5>
-                    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+                    <div class="card-title">タイトル</div>
+                    <div class="card-textarea">ビール・赤ワインが合います</div>
                 </div>
             </div>
-            <div class="col-3 card" style="width: 15rem;">
-                <img class="card-img-top" src="..." alt="カードの画像">
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-img">イメージ表示</div>
                 <div class="card-body">
-                    <h5 class="card-title">カードのタイトル</h5>
-                    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+                    <div class="card-title">タイトル</div>
+                    <div class="card-textarea">ビール・赤ワインが合います</div>
                 </div>
             </div>
-            <div class="col-3 card" style="width: 15rem;">
-                <img class="card-img-top" src="..." alt="カードの画像">
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-img">イメージ表示</div>
                 <div class="card-body">
-                    <h5 class="card-title">カードのタイトル</h5>
-                    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+                    <div class="card-title">タイトル</div>
+                    <div class="card-textarea">ビール・赤ワインが合います</div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
-
-
-
-
+</div>
 
 @endsection
